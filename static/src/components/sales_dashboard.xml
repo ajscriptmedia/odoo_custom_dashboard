@@ -10,7 +10,7 @@
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h1 class="text-primary fw-bold">Custom Sales Dashboard</h1>
                                     <div>
-                                        <select class="form-select">
+                                        <select class="form-select" t-model="state.period" t-on-change="onChangePeriod">
                                             <option value="0">Select Period</option>
                                             <option value="7">Last 7 Days</option>
                                             <option value="30">Last 30 Days</option>
@@ -23,10 +23,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <KpiCard name="'Quotations'" value="10" percentage="6"/>
-                        <KpiCard name="'Orders'" value="20" percentage="20"/>
-                        <KpiCard name="'Revenues'" value="'30.50K'" percentage="-3"/>
-                        <KpiCard name="'Average Order'" value="'2.5K'" percentage="-10"/>
+                        <KpiCard onClick.bind="viewQuotations" name="'Quotations'" value="state.quotations.value" percentage="state.quotations.percentage"/>
+                        <KpiCard onClick.bind="viewOrders" name="'Orders'" value="state.orders.value" percentage="state.orders.percentage"/>
+                        <KpiCard onClick.bind="viewRevenues" name="'Revenues'" value="state.orders.revenue" percentage="state.orders.revenue_percentage"/>
+                        <KpiCard onClick.bind="viewRevenues" name="'Average Order'" value="state.orders.average" percentage="state.orders.average_percentage"/>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 m-0 p-0">
