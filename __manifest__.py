@@ -16,9 +16,9 @@
     'application': True,
     'assets': {
         'web.assets_backend': [
-            'odoo-custom-dashboard/static/src/components/**/*.js',
-            'odoo-custom-dashboard/static/src/components/**/*.xml',
-            'odoo-custom-dashboard/static/src/components/**/*.scss',
+            'odoo_custom_dashboard/static/src/components/**/*.js',
+            'odoo_custom_dashboard/static/src/components/**/*.xml',
+            'odoo_custom_dashboard/static/src/components/**/*.scss',
         ],
     },
 }
